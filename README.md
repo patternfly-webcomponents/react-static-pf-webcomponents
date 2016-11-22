@@ -2,7 +2,7 @@
 
 A Patternfly + React starter kit based on [**React Static Boilerplate**](https://github.com/kriasoft/react-static-boilerplate).
 
-**Demo**: https://patternfly-react-starter.firebaseapp.com/ &nbsp;|&nbsp; **View** [docs](./docs) &nbsp;|&nbsp; **Follow us** on
+**Demo**: https://react-static-pf-webcompo-8dd7f.firebaseapp.com/ &nbsp;|&nbsp; **View** [docs](./docs) &nbsp;|&nbsp; **Follow us** on
 [Gitter](https://gitter.im/patternfly/patternfly), [Twitter](https://twitter.com/patternfly_des), and [Slack](https://patternfly.slack.com) &nbsp;|&nbsp;
 
 ![Image of PatternFly](https://raw.githubusercontent.com/priley86/patternfly-react-starter/master/icons/patternfly-orb.png)
