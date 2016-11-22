@@ -27,7 +27,18 @@ class AppsPage extends React.Component {
   render() {
     return (
       <Layout className="container-fluid container-pf-nav-pf-vertical">
-        <AppListView apps={ this.state.apps }/>
+        <div className="row">
+          <div className="col-md-12">
+            <div className="page-header">
+              <h1>Apps</h1>
+            </div>
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-md-12">
+            <AppListView apps={ this.state.apps }/>
+          </div>
+        </div>
       </Layout>
     );
   }

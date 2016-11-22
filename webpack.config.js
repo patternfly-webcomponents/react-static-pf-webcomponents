@@ -42,6 +42,20 @@ const config = {
     './main.js'
   ],
 
+  resolve: {
+    root: [
+      path.join(__dirname, "node_modules/patternfly-webcomponents/src"),
+      path.join(__dirname, "node_modules/patternfly-webcomponents/src/pf-alert"),
+      path.join(__dirname, "node_modules/patternfly-webcomponents/src/pf-hello"),
+      path.join(__dirname, "node_modules/patternfly-webcomponents/src/pf-i18n"),
+      path.join(__dirname, "node_modules/patternfly-webcomponents/src/pf-list-view"),
+      path.join(__dirname, "node_modules/patternfly-webcomponents/src/pf-template-repeater"),
+      path.join(__dirname, "node_modules/patternfly-webcomponents/src/pf-tabs"),
+      path.join(__dirname, "node_modules/patternfly-webcomponents/src/pf-utilization-bar-chart"),
+      path.join(__dirname, "node_modules/patternfly-webcomponents/src/pf-utils")
+    ]
+  },
+
   // Options affecting the output of the compilation
   output: {
     path: path.resolve(__dirname, './public/dist'),
@@ -98,6 +112,7 @@ const config = {
           path.resolve(__dirname, './core'),
           path.resolve(__dirname, './pages'),
           path.resolve(__dirname, './main.js'),
+          path.resolve(__dirname, "./node_modules/patternfly-webcomponents/src"),
         ],
         loader: `babel-loader?${JSON.stringify(babelConfig)}`,
       },

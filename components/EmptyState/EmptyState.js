@@ -8,11 +8,9 @@ class EmptyState extends React.Component {
     return (
         <div className="row">
           <div className="col-md-12">
-
             <div className="page-header">
               <h1>{ this.props.title }</h1>
             </div>
-
             <div className="blank-slate-pf">
               <div className="blank-slate-pf-icon">
                 <i className="fa fa-rocket"></i>

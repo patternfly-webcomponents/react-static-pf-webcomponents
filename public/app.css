@@ -1,0 +1,26 @@
+/**
+ Patternfly css extensions
+*/
+
+.blank-slate-pf {
+  background-color: #ffffff;
+}
+
+.list-view-pf-view {
+  margin-top: 0px;
+}
+
+/**
+ Web Component styles
+*/
+pf-tab {
+  padding: 10px 15px;
+  display: block;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-top: none;
+}
+
+pf-alert {
+  display:block;
+}
