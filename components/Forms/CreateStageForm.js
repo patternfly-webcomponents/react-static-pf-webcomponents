@@ -1,4 +1,9 @@
 import React, { PropTypes } from 'react';
+//web components
+import PfTooltip from 'pf-tooltip';
+
+//React extensions
+import Tooltip from 'Tooltip';
 
 class CreateStageForm extends React.Component {
   state = {
@@ -28,7 +33,10 @@ class CreateStageForm extends React.Component {
                  onChange={(e) => { this.handleChange(e,'name')}}/>
         </div>
         <div className="form-group">
-          <label htmlFor="exampleInputDescription">Stage Description</label>
+          <Tooltip placement="right" targetSelector="#stageDescriptionLabel">
+            A stage description.
+          </Tooltip>
+          <label id="stageDescriptionLabel" htmlFor="exampleInputDescription">Stage Description</label>
           <input type="text" className="form-control" id="exampleInputDescription" value={this.state.newStage.description}
                  onChange={(e) => { this.handleChange(e,'description')}}/>
         </div>
@@ -42,7 +50,12 @@ class CreateStageForm extends React.Component {
             <input type="checkbox"/>Check me out
           </label>
         </div>
-        <button type="submit" className="btn btn-default" onClick={this.handleSubmit}>Submit</button>
+        <Tooltip placement="right" targetSelector="#cancelStageButton">
+          Note: All inputs will be lost if not saved.
+        </Tooltip>
+        <button id="cancelStageButton" type="submit" className="btn btn-default" onClick={this.handleSubmit}>Cancel</button>
+        &nbsp;&nbsp;
+        <button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Submit</button>
       </form>
     )
   }

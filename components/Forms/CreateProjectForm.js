@@ -1,5 +1,11 @@
 import React, { PropTypes } from 'react';
 
+//web components
+import PfTooltip from 'pf-tooltip';
+
+//React extensions
+import Tooltip from 'Tooltip';
+
 class CreateProjectForm extends React.Component {
   state = {
     newProject: {}
@@ -28,7 +34,10 @@ class CreateProjectForm extends React.Component {
                  onChange={(e) => { this.handleChange(e,'name')}}/>
         </div>
         <div className="form-group">
-          <label htmlFor="exampleInputDescription">Project Description</label>
+          <Tooltip placement="right" targetSelector="#projectDescriptionLabel">
+            A project description for Github.
+          </Tooltip>
+          <label id="projectDescriptionLabel" htmlFor="exampleInputDescription">Project Description <span id="descriptionTooltip"></span></label>
           <input type="text" className="form-control" id="exampleInputDescription" value={this.state.newProject.description}
                  onChange={(e) => { this.handleChange(e,'description')}}/>
         </div>
@@ -42,7 +51,13 @@ class CreateProjectForm extends React.Component {
             <input type="checkbox"/>Check me out
           </label>
         </div>
-        <button type="submit" className="btn btn-default" onClick={this.handleSubmit}>Submit</button>
+        <Tooltip placement="right" targetSelector="#cancelProjectButton">
+          Note: All inputs will be lost if not saved.
+        </Tooltip>
+        <button id="cancelProjectButton" type="submit" className="btn btn-default" onClick={this.handleSubmit}>Cancel</button>
+        &nbsp;&nbsp;
+        <button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Submit</button>
+
       </form>
     )
   }

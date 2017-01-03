@@ -2,8 +2,14 @@ import React, { PropTypes } from 'react';
 import Layout from '../../components/Layout';
 import CreateProjectForm from '../../components/Forms/CreateProjectForm';
 import CreateStageForm from '../../components/Forms/CreateStageForm';
+
+//web components
 import PfTabs from 'pf-tabs';
 import PfAlert from 'pf-alert';
+
+//React extensions
+import Tab from 'Tab';
+import Tabs from 'Tabs';
 
 class HomePage extends React.Component {
 
@@ -38,24 +44,24 @@ class HomePage extends React.Component {
 
         <div className="row">
           <div className="col-md-12">
-            <pf-tabs>
-              <pf-tab title="Create Project" active="true">
+            <Tabs>
+              <Tab tabTitle="Create Project" active={true}>
                 {this.state.showSuccess &&
                 <pf-alert type="success">
                   <strong>Great job!</strong> This is really working out great for us.
                 </pf-alert>
                 }
                 <CreateProjectForm handleSubmit={this.handleSubmitProject.bind(this)}/>
-              </pf-tab>
-              <pf-tab title="Create Stage">
+              </Tab>
+              <Tab tabTitle="Create Stage">
                 {this.state.showError &&
                 <pf-alert type="danger">
                   <strong>Hey there is a problem!</strong> Yeah this is really messed up and you should know about it.
                 </pf-alert>
                 }
                 <CreateStageForm handleSubmit={this.handleSubmitStage.bind(this)}/>
-              </pf-tab>
-            </pf-tabs>
+              </Tab>
+            </Tabs>
           </div>
         </div>
 

@@ -24,3 +24,7 @@ pf-tab {
 pf-alert {
   display:block;
 }
+
+pf-tooltip {
+  display: none;
+}

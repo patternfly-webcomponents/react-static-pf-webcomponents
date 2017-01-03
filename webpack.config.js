@@ -51,8 +51,11 @@ const config = {
       path.join(__dirname, "node_modules/patternfly-webcomponents/src/pf-list-view"),
       path.join(__dirname, "node_modules/patternfly-webcomponents/src/pf-template-repeater"),
       path.join(__dirname, "node_modules/patternfly-webcomponents/src/pf-tabs"),
+      path.join(__dirname, "node_modules/patternfly-webcomponents/src/pf-tooltip"),
       path.join(__dirname, "node_modules/patternfly-webcomponents/src/pf-utilization-bar-chart"),
-      path.join(__dirname, "node_modules/patternfly-webcomponents/src/pf-utils")
+      path.join(__dirname, "node_modules/patternfly-webcomponents/src/pf-utils"),
+      path.join(__dirname, "node_modules/react-patternfly-shims/src/Tabs"),
+      path.join(__dirname, "node_modules/react-patternfly-shims/src/Tooltip")
     ]
   },
 
@@ -113,6 +116,7 @@ const config = {
           path.resolve(__dirname, './pages'),
           path.resolve(__dirname, './main.js'),
           path.resolve(__dirname, "./node_modules/patternfly-webcomponents/src"),
+          path.resolve(__dirname, "./node_modules/react-patternfly-shims/src"),
         ],
         loader: `babel-loader?${JSON.stringify(babelConfig)}`,
       },
