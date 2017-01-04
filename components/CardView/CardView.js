@@ -45,7 +45,7 @@ class CardView extends React.Component {
                 <span className="fa fa-check"></span>
               </div>
             </div>
-            <p className="card-pf-info text-center"><strong>Created On</strong> 2015-03-01 02:00 AM <br/> Never Expires</p>
+            <p className="card-pf-info text-center"><strong>Created On</strong> 2015-03-01 02:00 AM</p> <br/>
           </div>
           <div className="card-pf-view-checkbox">
             <input type="checkbox"/>

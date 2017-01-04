@@ -9,6 +9,7 @@ class AppsPage extends React.Component {
 
   componentDidMount() {
     document.title = 'Patternfly React Boiler | Apps';
+    document.body.style.backgroundColor = constants.bg_grey;
   }
 
   componentWillMount() {

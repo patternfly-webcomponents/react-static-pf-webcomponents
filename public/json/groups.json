@@ -1,0 +1,76 @@
+[
+  {
+    "id": 1,
+    "name": "pied-piper-developers",
+    "users": [
+      {
+        "id": 3,
+        "username": "rhendriks"
+      },
+      {
+        "id": 5,
+        "username": "dinesh"
+      },
+      {
+        "id": 2,
+        "username": "gilfoyle"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "pied-piper-business",
+    "users": [
+      {
+        "id": 3,
+        "username": "rhendriks"
+      },
+      {
+        "id": 1,
+        "username": "ebachman"
+      },
+      {
+        "id": 4,
+        "username": "jared"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "raviga-capital",
+    "users": [
+      {
+        "id": 8,
+        "username": "monica"
+      },
+      {
+        "id": 9,
+        "username": "laurie"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "hooli",
+    "users": [
+      {
+        "id": 6,
+        "username": "bighead"
+      },
+      {
+        "id": 7,
+        "username": "gavin"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "hooli-management",
+    "users": [
+      {
+        "id": 7,
+        "username": "gavin"
+      }
+    ]
+  }
+]

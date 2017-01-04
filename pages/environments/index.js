@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import Layout from '../../components/Layout';
 import WizardView from '../../components/Wizard/WizardView';
 import c from '../common.css';
+import constants from '../../core/constants';
 
 class EnvironmentsPage extends React.Component {
 
@@ -9,6 +10,7 @@ class EnvironmentsPage extends React.Component {
 
   componentDidMount() {
     document.title = 'Patternfly React Boiler | Environments';
+    document.body.style.backgroundColor = constants.bg_white;
   }
 
   handleClick = (event) => {
@@ -22,30 +24,24 @@ class EnvironmentsPage extends React.Component {
   render() {
     const { projects } = this.props;
 
-    if(this.state.wizardView){
-      return (
-        <Layout className={c.add_layout}>
-          <div className={c.add_container + ' container-pf-nav-pf-vertical'}>
+    return (
+      <Layout className="container-fluid container-pf-nav-pf-vertical">
+        <div className="page-header" key="evironments-page-header">
+          <h2> Environments</h2>
+        </div>
+        <div className={c.add_layout}>
+          <div className={c.add_container}>
             <div className={c.add_button} onClick={this.handleClick}>
               <i className="fa fa-4x fa-plus-circle" aria-hidden="true"></i>
               <h3>Add environments</h3>
             </div>
           </div>
-          <WizardView handleClose={this.handleClose.bind(this)}/>
-        </Layout>
-      );
-    } else {
-      return (
-        <Layout className={c.add_layout}>
-          <div className={c.add_container + ' container-pf-nav-pf-vertical'}>
-            <div className={c.add_button} onClick={this.handleClick}>
-              <i className="fa fa-4x fa-plus-circle" aria-hidden="true"></i>
-              <h3>Add environments</h3>
-            </div>
-          </div>
-        </Layout>
-      );
-    }
+        </div>
+        {this.state.wizardView &&
+        <WizardView handleClose={this.handleClose.bind(this)}/>
+        }
+      </Layout>
+    );
   }
 
 }

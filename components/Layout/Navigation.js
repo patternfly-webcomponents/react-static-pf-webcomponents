@@ -44,20 +44,25 @@ class Navigation extends React.Component {
           </li>
           <li className={"list-group-item" + (location.pathname == '/apps' ? ' active' : '')}>
             <Link to="/apps">
-              <span className="fa fa-shield" data-toggle="tooltip" title="Dolor"></span>
+              <span className="fa fa-shield" data-toggle="tooltip" title="Apps"></span>
               <span className="list-group-item-value">Apps</span>
             </Link>
           </li>
           <li className={"list-group-item" + (location.pathname == '/users' ? ' active' : '')}>
             <Link to="/users">
-              <span className="fa fa-space-shuttle" data-toggle="tooltip" title="Ipsum"></span>
+              <span className="fa fa-users" data-toggle="tooltip" title="Users"></span>
               <span className="list-group-item-value">Users</span>
             </Link>
-
+          </li>
+          <li className={"list-group-item" + (location.pathname == '/groups' ? ' active' : '')}>
+            <Link to="/groups">
+              <span className="fa fa-space-shuttle" data-toggle="tooltip" title="Groups"></span>
+              <span className="list-group-item-value">Groups</span>
+            </Link>
           </li>
           <li className={"list-group-item" + (location.pathname == '/environments' ? ' active' : '')}>
             <Link to="/environments">
-              <span className="fa fa-paper-plane" data-toggle="tooltip" title="Amet"></span>
+              <span className="fa fa-paper-plane" data-toggle="tooltip" title="Environments"></span>
               <span className="list-group-item-value">Environments</span>
             </Link>
           </li>

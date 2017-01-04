@@ -9,6 +9,7 @@ class UsersPage extends React.Component {
 
   componentDidMount() {
     document.title = 'Patternfly React Boiler | Users';
+    document.body.style.backgroundColor = constants.bg_grey;
   }
 
   componentWillMount() {
@@ -27,10 +28,13 @@ class UsersPage extends React.Component {
   render() {
     if(this.state.users.length){
       return (
-        <Layout>
-          <div className="container-fluid container-pf-nav-pf-vertical container-cards-pf">
-            <CardView users={ this.state.users } />
+        <Layout className="container-fluid container-pf-nav-pf-vertical">
+          <div className="page-header" key="users-page-header">
+            <h2> Users</h2>
           </div>
+
+            <CardView users={ this.state.users } />
+
         </Layout>
       );
     }

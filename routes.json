@@ -28,6 +28,10 @@
     "page": "./pages/users"
   },
   {
+    "path": "/groups",
+    "page": "./pages/groups"
+  },
+  {
     "path": "/environments",
     "page": "./pages/environments"
   }

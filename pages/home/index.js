@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import Layout from '../../components/Layout';
 import CreateProjectForm from '../../components/Forms/CreateProjectForm';
 import CreateStageForm from '../../components/Forms/CreateStageForm';
+import constants from '../../core/constants';
 
 //web components
 import PfTabs from 'pf-tabs';
@@ -19,6 +20,7 @@ class HomePage extends React.Component {
 
   componentDidMount() {
     document.title = 'Patternfly React Boiler | Home';
+    document.body.style.backgroundColor = constants.bg_grey;
   }
 
   handleSubmitProject(event){
