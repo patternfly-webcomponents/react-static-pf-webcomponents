@@ -19,6 +19,7 @@
     "react-patternfly-shims": "git+https://github.com/patternfly-webcomponents/react-patternfly-shims.git",
     "react-redux": "^4.4.5",
     "redux": "^3.5.2",
+    "webcomponentsjs": "^1.0.2",
     "whatwg-fetch": "^1.0.0"
   },
   "devDependencies": {
