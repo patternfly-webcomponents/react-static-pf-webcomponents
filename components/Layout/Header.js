@@ -12,7 +12,7 @@ function Header() {
           <span className="icon-bar"></span>
         </button>
         <a href="/" className="navbar-brand">
-          <img className="navbar-brand-icon" src="logo-alt.svg" alt=""/><img className="navbar-brand-name" src="brand-alt.svg" alt="PatternFly Enterprise Application" />
+          <img className="navbar-brand-icon" src="/logo-alt.svg" alt=""/><img className="navbar-brand-name" src="/brand-alt.svg" alt="PatternFly Enterprise Application" />
         </a>
       </div>
       <nav className="collapse navbar-collapse">
