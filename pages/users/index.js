@@ -2,6 +2,7 @@ import React, { PropTypes } from 'react';
 import Layout from '../../components/Layout';
 import CardView from '../../components/CardView/CardView';
 import constants from '../../core/constants';
+import UsersApi from '../../data/UsersApi';
 
 class UsersPage extends React.Component {
 
@@ -17,12 +18,9 @@ class UsersPage extends React.Component {
   }
 
   getUsers() {
-    let that = this;
-    fetch(constants.get_users_url).then(r => r.json())
-      .then(data => {
-        that.setState({users : data})
-      })
-      .catch(e => console.log(e));
+    UsersApi.getUsers().then((data) => {
+      this.setState({users: data});
+    }).catch(e => console.log(e));
   }
 
   render() {

@@ -114,6 +114,7 @@ const config = {
           path.resolve(__dirname, './components'),
           path.resolve(__dirname, './core'),
           path.resolve(__dirname, './pages'),
+          path.resolve(__dirname, './data'),
           path.resolve(__dirname, './main.js'),
           path.resolve(__dirname, "./node_modules/patternfly-webcomponents/src"),
           path.resolve(__dirname, "./node_modules/react-patternfly-shims/src"),
