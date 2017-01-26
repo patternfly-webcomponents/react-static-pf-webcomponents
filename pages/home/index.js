@@ -4,13 +4,8 @@ import CreateProjectForm from '../../components/Forms/CreateProjectForm';
 import CreateStageForm from '../../components/Forms/CreateStageForm';
 import constants from '../../core/constants';
 
-//web components
-import PfTabs from 'pf-tabs';
-import PfAlert from 'pf-alert';
-
 //React extensions
-import Tab from 'Tab';
-import Tabs from 'Tabs';
+import { Tab, Tabs } from 'react-patternfly-shims';
 
 class HomePage extends React.Component {
 

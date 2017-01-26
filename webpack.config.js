@@ -35,29 +35,14 @@ const config = {
     //css entries
     // '!!style!css!patternfly/dist/css/patternfly.css',
     // '!!style!css!patternfly/dist/css/patternfly-additions.css',
+    '!!style!css!patternfly-webcomponents/dist/css/patternfly-webcomponents.css',
     
     //js entries
+    'patternfly-webcomponents/dist/js/patternfly.js',
     'jquery-match-height/dist/jquery.matchHeight.js',
     /* The main entry point of your JavaScript application */
     './main.js'
   ],
-
-  resolve: {
-    root: [
-      path.join(__dirname, "node_modules/patternfly-webcomponents/src"),
-      path.join(__dirname, "node_modules/patternfly-webcomponents/src/pf-alert"),
-      path.join(__dirname, "node_modules/patternfly-webcomponents/src/pf-hello"),
-      path.join(__dirname, "node_modules/patternfly-webcomponents/src/pf-i18n"),
-      path.join(__dirname, "node_modules/patternfly-webcomponents/src/pf-list-view"),
-      path.join(__dirname, "node_modules/patternfly-webcomponents/src/pf-template-repeater"),
-      path.join(__dirname, "node_modules/patternfly-webcomponents/src/pf-tabs"),
-      path.join(__dirname, "node_modules/patternfly-webcomponents/src/pf-tooltip"),
-      path.join(__dirname, "node_modules/patternfly-webcomponents/src/pf-utilization-bar-chart"),
-      path.join(__dirname, "node_modules/patternfly-webcomponents/src/pf-utils"),
-      path.join(__dirname, "node_modules/react-patternfly-shims/src/Tabs"),
-      path.join(__dirname, "node_modules/react-patternfly-shims/src/Tooltip")
-    ]
-  },
 
   // Options affecting the output of the compilation
   output: {
@@ -115,9 +100,7 @@ const config = {
           path.resolve(__dirname, './core'),
           path.resolve(__dirname, './pages'),
           path.resolve(__dirname, './data'),
-          path.resolve(__dirname, './main.js'),
-          path.resolve(__dirname, "./node_modules/patternfly-webcomponents/src"),
-          path.resolve(__dirname, "./node_modules/react-patternfly-shims/src"),
+          path.resolve(__dirname, './main.js')
         ],
         loader: `babel-loader?${JSON.stringify(babelConfig)}`,
       },

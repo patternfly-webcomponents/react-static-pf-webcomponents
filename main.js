@@ -13,9 +13,6 @@ import history from './core/history';
 let routes = require('./routes.json'); // Loaded with utils/routes-loader.js
 const container = document.getElementById('main');
 
-//polfyill scripts
-import htmlElementShim from './core/htmlElementShim';
-
 function renderComponent(component) {
   ReactDOM.render(<Provider store={store}>{component}</Provider>, container);
 }

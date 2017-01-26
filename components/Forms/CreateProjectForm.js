@@ -1,10 +1,5 @@
 import React, { PropTypes } from 'react';
-
-//web components
-import PfTooltip from 'pf-tooltip';
-
-//React extensions
-import Tooltip from 'Tooltip';
+import { Tooltip } from 'react-patternfly-shims';
 
 class CreateProjectForm extends React.Component {
   state = {

@@ -11,7 +11,7 @@
 }
 
 /**
- Web Component styles
+ PF Tab Styles
 */
 pf-tab {
   padding: 10px 15px;
@@ -19,12 +19,4 @@ pf-tab {
   background-color: #ffffff;
   border: 1px solid #ddd;
   border-top: none;
-}
-
-pf-alert {
-  display:block;
-}
-
-pf-tooltip {
-  display: none;
 }
