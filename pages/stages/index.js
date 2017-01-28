@@ -12,7 +12,7 @@ class StagesPage extends React.Component {
 
   render() {
     return (
-      <Layout className="container-fluid container-pf-nav-pf-vertical">
+      <Layout className="container-fluid container-pf-nav-pf-vertical" nav= { true }>
         <EmptyState title="Stages"/>
       </Layout>
     );

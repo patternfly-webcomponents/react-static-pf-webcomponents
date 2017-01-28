@@ -25,7 +25,7 @@ class EnvironmentsPage extends React.Component {
     const { projects } = this.props;
 
     return (
-      <Layout className="container-fluid container-pf-nav-pf-vertical">
+      <Layout className="container-fluid container-pf-nav-pf-vertical" nav= { true }>
         <div className="page-header" key="evironments-page-header">
           <h2> Environments</h2>
         </div>

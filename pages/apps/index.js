@@ -27,7 +27,7 @@ class AppsPage extends React.Component {
 
   render() {
     return (
-      <Layout className="container-fluid container-pf-nav-pf-vertical">
+      <Layout className="container-fluid container-pf-nav-pf-vertical" nav= { true }>
         <div className="row">
           <div className="col-md-12">
             <div className="page-header">

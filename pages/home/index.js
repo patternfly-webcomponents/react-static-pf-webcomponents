@@ -5,7 +5,7 @@ import CreateStageForm from '../../components/Forms/CreateStageForm';
 import constants from '../../core/constants';
 
 //React extensions
-import { Tab, Tabs } from 'react-patternfly-shims';
+import { Alert, Tab, Tabs } from 'react-patternfly-shims';
 
 class HomePage extends React.Component {
 
@@ -15,7 +15,7 @@ class HomePage extends React.Component {
 
   componentDidMount() {
     document.title = 'Patternfly React Boiler | Home';
-    document.body.style.backgroundColor = constants.bg_grey;
+    document.body.style.backgroundColor = constants.bg_white;
   }
 
   handleSubmitProject(event){
@@ -30,7 +30,7 @@ class HomePage extends React.Component {
 
   render() {
     return (
-      <Layout className="container-fluid container-pf-nav-pf-vertical">
+      <Layout className="container-fluid container-pf-nav-pf-vertical" nav= { true }>
         <div className="row">
           <div className="col-md-12">
             <div className="page-header">
@@ -42,19 +42,19 @@ class HomePage extends React.Component {
         <div className="row">
           <div className="col-md-12">
             <Tabs>
-              <Tab tabTitle="Create Project" active={true}>
+              <Tab tabTitle="Create Project">
                 {this.state.showSuccess &&
-                <pf-alert type="success">
+                <Alert type="success" persistent="true">
                   <strong>Great job!</strong> This is really working out great for us.
-                </pf-alert>
+                </Alert>
                 }
                 <CreateProjectForm handleSubmit={this.handleSubmitProject.bind(this)}/>
               </Tab>
               <Tab tabTitle="Create Stage">
                 {this.state.showError &&
-                <pf-alert type="danger">
+                <Alert type="danger" persistent="true">
                   <strong>Hey there is a problem!</strong> Yeah this is really messed up and you should know about it.
-                </pf-alert>
+                </Alert>
                 }
                 <CreateStageForm handleSubmit={this.handleSubmitStage.bind(this)}/>
               </Tab>

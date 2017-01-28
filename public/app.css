@@ -14,9 +14,8 @@
  PF Tab Styles
 */
 pf-tab {
-  padding: 10px 15px;
+  padding: 20px 15px;
   display: block;
   background-color: #ffffff;
-  border: 1px solid #ddd;
   border-top: none;
 }

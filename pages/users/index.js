@@ -24,26 +24,15 @@ class UsersPage extends React.Component {
   }
 
   render() {
-    if(this.state.users.length){
-      return (
-        <Layout className="container-fluid container-pf-nav-pf-vertical">
+    return (
+        <Layout className="container-fluid container-pf-nav-pf-vertical" nav= { true }>
           <div className="page-header" key="users-page-header">
             <h2> Users</h2>
           </div>
-
             <CardView users={ this.state.users } />
-
         </Layout>
-      );
-    }
-    return (
-      <Layout>
-        <div className="container-fluid container-pf-nav-pf-vertical container-cards-pf">
-        </div>
-      </Layout>
     );
   }
-
 }
 
 export default UsersPage;

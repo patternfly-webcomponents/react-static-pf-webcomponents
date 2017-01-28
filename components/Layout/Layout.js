@@ -8,14 +8,21 @@ class Layout extends React.Component {
 
   static propTypes = {
     className: PropTypes.string,
+    nav: PropTypes.bool
   };
 
   render() {
     return (
       <div>
         <Header />
-        <Navigation />
-        <div {...this.props} className={cx(s.content, this.props.className)} />
+        {(() => {
+          if(this.props.nav) {
+            return <Navigation />;
+          }
+        })()}
+        <div className={cx(s.content, this.props.className)}>
+          { this.props.children }
+        </div>
       </div>
     );
   }
