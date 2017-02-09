@@ -7,7 +7,13 @@ class CreateProjectForm extends React.Component {
   };
 
   static propTypes = {
-    handleSubmit: React.PropTypes.func
+    handleSubmit: React.PropTypes.func,
+    value: React.PropTypes.object
+  };
+
+  componentWillMount(){
+    let newProject = Object.assign({}, this.props.value || {});
+    this.setState({newProject: newProject});
   };
 
   handleSubmit = (event) => {

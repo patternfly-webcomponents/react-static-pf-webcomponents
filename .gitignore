@@ -13,3 +13,6 @@ npm-debug.log
 # Firebase
 firebase-debug.log
 .idea
+
+# Jest
+coverage

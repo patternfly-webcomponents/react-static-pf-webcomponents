@@ -95,11 +95,11 @@ available at [http://localhost:3000/](http://localhost:3000/).
 
 ### How to Test
 
-The unit tests are powered by [chai](http://chaijs.com/) and [mocha](http://mochajs.org/).
+The unit tests are powered by [jest](https://facebook.github.io/jest/).
 
 ```shell
 $ npm run lint                  # Check JavaScript and CSS code for potential issues
-$ npm run test                  # Run unit tests. Or, `npm run test:watch`
+$ npm run test                  # Run unit tests. Or, `npm run test:watch` or `npm run test:cov`
 ```
 
 ### How to Deploy

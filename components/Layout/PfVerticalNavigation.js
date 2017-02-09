@@ -497,8 +497,8 @@
       // Bind menu items
       bindMenuItemsBehavior(handleItemSelections);
 
-      //Set tooltips
-      setTooltips();
+      //Set tooltips, currently disabled until tooltips are refactored to use <pf-tooltip> 
+      //setTooltips();
 
       loadFromLocalStorage();
 
