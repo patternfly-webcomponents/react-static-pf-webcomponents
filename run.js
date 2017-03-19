@@ -62,7 +62,8 @@ tasks.set('bundle', () => {
     webpack(webpackConfig).run((err, stats) => {
       if (err) {
         reject(err);
-      } else {
+      }
+      else {
         console.log(stats.toString(webpackConfig.stats));
         resolve();
       }
@@ -93,7 +94,9 @@ tasks.set('publish', () => {
       project: config.project,
       cwd: __dirname,
     }))
-    .then(() => { setTimeout(() => process.exit()); });
+    .then(() => {
+      setTimeout(() => process.exit());
+    });
 });
 
 //

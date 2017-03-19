@@ -7,7 +7,8 @@ function decodeParam(val) {
 
   try {
     return decodeURIComponent(val);
-  } catch (err) {
+  }
+  catch (err) {
     if (err instanceof URIError) {
       err.message = `Failed to decode param '${val}'`;
       err.status = 400;
@@ -65,11 +66,11 @@ function resolve(routes, context) {
         }),
       ]).then(([Page, ...data]) => {
         const props = keys.reduce((result, key, i) => ({ ...result, [key]: data[i] }), {});
-        return <Page route={{ ...route, params }} error={context.error} {...props} />;
+        return <Page route={{ ...route, params }} error={context.error} {...props}/>;
       });
     }
 
-    return route.load().then(Page => <Page route={{ ...route, params }} error={context.error} />);
+    return route.load().then(Page => <Page route={{ ...route, params }} error={context.error}/>);
   }
 
   const error = new Error('Page not found');

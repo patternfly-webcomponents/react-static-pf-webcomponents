@@ -1,32 +1,34 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { Tooltip } from 'react-patternfly-shims';
 
 class CreateStageForm extends React.Component {
-  state = {
-    newStage: {}
-  };
 
   static propTypes = {
-    handleSubmit: React.PropTypes.func
+    handleSubmit: React.PropTypes.func,
   };
 
+  state = {
+    newStage: {},
+  };
   handleSubmit = (event) => {
     this.props.handleSubmit(event);
   };
 
   handleChange = (e, prop) => {
-    let o = Object.assign({}, this.state.newStage);
+    const o = Object.assign({}, this.state.newStage);
     o[prop] = e.target.value;
-    this.setState({newStage: o});
+    this.setState({ newStage: o });
   };
 
-  render(){
+  render() {
     return (
       <form role="form">
         <div className="form-group">
           <label htmlFor="exampleInputName">Stage Name</label>
           <input type="text" className="form-control" id="exampleInputName" value={this.state.newStage.name}
-                 onChange={(e) => { this.handleChange(e,'name')}}/>
+            onChange={(e) => {
+              this.handleChange(e, 'name');
+            }}/>
         </div>
         <div className="form-group">
           <Tooltip placement="right" targetSelector="#stageDescriptionLabel">
@@ -34,7 +36,9 @@ class CreateStageForm extends React.Component {
           </Tooltip>
           <label id="stageDescriptionLabel" htmlFor="exampleInputDescription">Stage Description</label>
           <input type="text" className="form-control" id="exampleInputDescription" value={this.state.newStage.description}
-                 onChange={(e) => { this.handleChange(e,'description')}}/>
+            onChange={(e) => {
+              this.handleChange(e, 'description');
+            }}/>
         </div>
         <div className="form-group">
           <label htmlFor="exampleInputFile">File input</label>
@@ -53,7 +57,7 @@ class CreateStageForm extends React.Component {
         &nbsp;&nbsp;
         <button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Submit</button>
       </form>
-    )
+    );
   }
 }
 export default CreateStageForm;

@@ -95,7 +95,28 @@
   },
   "eslintConfig": {
     "parser": "babel-eslint",
-    "extends": "airbnb"
+    "extends": "airbnb",
+    "rules": {
+      "array-callback-return": ["off"],
+      "brace-style": ["error","stroustrup"],
+      "consistent-return": ["off"],
+      "comma-dangle": ["off"],
+      "eqeqeq": ["error", "always"],
+      "max-len": ["error", 130],
+      "no-console": ["off"],
+      "no-param-reassign": ["off"],
+      "no-restricted-syntax": ["off"],
+      "func-names": ["off"],
+      "react/prefer-stateless-function": ["off"],
+      "react/jsx-closing-bracket-location": ["error", "after-props"],
+      "react/jsx-first-prop-new-line": ["error", "never"],
+      "react/jsx-no-bind": "off",
+      "react/jsx-indent": ["error", 2],
+      "react/jsx-space-before-closing": ["error","never"]
+    }, 
+    "env": {
+      "jquery": true
+    }
   },
   "stylelint": {
     "extends": "stylelint-config-standard",

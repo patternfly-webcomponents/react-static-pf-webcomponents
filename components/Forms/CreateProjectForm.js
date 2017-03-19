@@ -1,51 +1,57 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import { Tooltip } from 'react-patternfly-shims';
 
 class CreateProjectForm extends React.Component {
-  state = {
-    newProject: {}
-  };
 
   static propTypes = {
     handleSubmit: React.PropTypes.func,
-    value: React.PropTypes.object
+    value: React.PropTypes.object,
   };
 
-  componentWillMount(){
-    let newProject = Object.assign({}, this.props.value || {});
-    this.setState({newProject: newProject});
+  state = {
+    newProject: {},
   };
+
+  componentWillMount() {
+    const newProject = Object.assign({}, this.props.value || {});
+    this.setState({ newProject });
+  }
 
   handleSubmit = (event) => {
     this.props.handleSubmit(event);
   };
 
   handleChange = (e, prop) => {
-    let o = Object.assign({}, this.state.newProject);
+    const o = Object.assign({}, this.state.newProject);
     o[prop] = e.target.value;
-    this.setState({newProject: o});
+    this.setState({ newProject: o });
   };
 
-  render(){
+  render() {
     return (
       <form role="form">
         <div className="form-group">
           <label htmlFor="exampleInputName">Project Name</label>
           <input type="text" className="form-control" id="exampleInputName" value={this.state.newProject.name}
-                 onChange={(e) => { this.handleChange(e,'name')}}/>
+            onChange={(e) => {
+              this.handleChange(e, 'name');
+            }}/>
         </div>
         <div className="form-group">
           <Tooltip placement="right" targetSelector="#projectDescriptionLabel">
             A project description for Github.
           </Tooltip>
-          <label id="projectDescriptionLabel" htmlFor="exampleInputDescription">Project Description <span id="descriptionTooltip"></span></label>
+          <label id="projectDescriptionLabel"
+            htmlFor="exampleInputDescription">Project Description <span id="descriptionTooltip"></span></label>
           <input type="text" className="form-control" id="exampleInputDescription" value={this.state.newProject.description}
-                 onChange={(e) => { this.handleChange(e,'description')}}/>
+            onChange={(e) => {
+              this.handleChange(e, 'description');
+            }}/>
         </div>
         <div className="form-group">
           <label htmlFor="exampleInputFile">File input</label>
           <input type="file" id="exampleInputFile"/>
-            <p className="help-block">Example block-level help text here.</p>
+          <p className="help-block">Example block-level help text here.</p>
         </div>
         <div className="checkbox">
           <label>
@@ -60,7 +66,7 @@ class CreateProjectForm extends React.Component {
         <button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Submit</button>
 
       </form>
-    )
+    );
   }
 }
 export default CreateProjectForm;

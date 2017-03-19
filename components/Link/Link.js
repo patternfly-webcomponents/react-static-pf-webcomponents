@@ -6,6 +6,7 @@ class Link extends React.Component {
   static propTypes = {
     to: PropTypes.oneOfType([PropTypes.string, PropTypes.object]).isRequired,
     onClick: PropTypes.func,
+    children: PropTypes.node,
   };
 
   handleClick = (event) => {
@@ -29,7 +30,8 @@ class Link extends React.Component {
 
     if (this.props.to) {
       history.push(this.props.to);
-    } else {
+    }
+    else {
       history.push({
         pathname: event.currentTarget.pathname,
         search: event.currentTarget.search,
@@ -39,9 +41,9 @@ class Link extends React.Component {
 
   render() {
     const { to, ...props } = this.props; // eslint-disable-line no-use-before-define
-    return <a href={history.createHref(to)} {...props} onClick={this.handleClick}>
-      { this.props.children }
-    </a>;
+    return (<a href={history.createHref(to)} {...props} onClick={this.handleClick}>
+      {this.props.children}
+    </a>);
   }
 
 }

@@ -1,18 +1,18 @@
 import $ from 'jquery';
 global.$ = global.jQuery = $;
 
-var localStorageMock = (function() {
-  var store = {};
+const localStorageMock = (function () {
+  let store = {};
   return {
-    getItem: function(key) {
+    getItem(key) {
       return store[key];
     },
-    setItem: function(key, value) {
+    setItem(key, value) {
       store[key] = value.toString();
     },
-    clear: function() {
+    clear() {
       store = {};
-    }
+    },
   };
-})();
+}());
 Object.defineProperty(window, 'localStorage', { value: localStorageMock });

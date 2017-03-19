@@ -1,6 +1,9 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 
 class ProjectListView extends React.Component {
+  static propTypes = {
+    projects: React.PropTypes.array,
+  }
 
   render() {
     const { projects } = this.props;
@@ -8,7 +11,7 @@ class ProjectListView extends React.Component {
     return (
       <div className="list-group list-view-pf list-view-pf-view">
 
-        {projects.map((project,i) =>
+        {projects.map((project, i) =>
           <div className="list-group-item" key={i}>
 
             <div className="list-view-pf-actions">
@@ -22,7 +25,7 @@ class ProjectListView extends React.Component {
               <div className="list-view-pf-body">
                 <div className="list-view-pf-description">
                   <div className="list-group-item-heading">
-                    { project.name }
+                    {project.name}
                   </div>
                 </div>
                 <div className="list-view-pf-additional-info">
@@ -49,7 +52,7 @@ class ProjectListView extends React.Component {
           </div>
         )}
       </div>
-    )
+    );
   }
 
 }

@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import Layout from '../../components/Layout';
 import WizardView from '../../components/Wizard/WizardView';
 import c from '../common.css';
@@ -13,19 +13,17 @@ class EnvironmentsPage extends React.Component {
     document.body.style.backgroundColor = constants.bg_white;
   }
 
-  handleClick = (event) => {
-    this.setState({wizardView: true});
+  handleClick = () => {
+    this.setState({ wizardView: true });
   };
 
-  handleClose = (event) => {
-    this.setState({wizardView: false});
+  handleClose = () => {
+    this.setState({ wizardView: false });
   };
 
   render() {
-    const { projects } = this.props;
-
     return (
-      <Layout className="container-fluid container-pf-nav-pf-vertical" nav= { true }>
+      <Layout className="container-fluid container-pf-nav-pf-vertical" nav>
         <div className="page-header" key="evironments-page-header">
           <h2> Environments</h2>
         </div>
@@ -38,7 +36,7 @@ class EnvironmentsPage extends React.Component {
           </div>
         </div>
         {this.state.wizardView &&
-        <WizardView handleClose={this.handleClose.bind(this)}/>
+          <WizardView handleClose={this.handleClose.bind(this)}/>
         }
       </Layout>
     );

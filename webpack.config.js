@@ -32,12 +32,12 @@ const config = {
 
   // The entry point for the bundle
   entry: [
-    //css entries
+    // css entries
     // '!!style!css!patternfly/dist/css/patternfly.css',
     // '!!style!css!patternfly/dist/css/patternfly-additions.css',
     '!!style!css!patternfly-webcomponents/dist/css/patternfly-webcomponents.css',
-    
-    //js entries
+
+    // js entries
     'patternfly-webcomponents/dist/js/patternfly.js',
     'jquery-match-height/dist/jquery.matchHeight.js',
     /* The main entry point of your JavaScript application */

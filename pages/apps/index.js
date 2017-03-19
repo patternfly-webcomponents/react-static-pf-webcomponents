@@ -1,4 +1,4 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
 import Layout from '../../components/Layout';
 import AppListView from '../../components/ListView/AppListView';
 import constants from '../../core/constants';
@@ -7,27 +7,27 @@ class AppsPage extends React.Component {
 
   state = { apps: [] };
 
+  componentWillMount() {
+    this.getApps();
+  }
+
   componentDidMount() {
     document.title = 'Patternfly React Boiler | Apps';
     document.body.style.backgroundColor = constants.bg_grey;
   }
 
-  componentWillMount() {
-    this.getApps();
-  }
-
   getApps() {
-    let that = this;
+    const that = this;
     fetch(constants.get_apps_url).then(r => r.json())
       .then(data => {
-        that.setState({apps : data})
+        that.setState({ apps: data });
       })
-      .catch(e => console.log("Booo"));
+      .catch(e => console.log(e));
   }
 
   render() {
     return (
-      <Layout className="container-fluid container-pf-nav-pf-vertical" nav= { true }>
+      <Layout className="container-fluid container-pf-nav-pf-vertical" nav>
         <div className="row">
           <div className="col-md-12">
             <div className="page-header">
@@ -37,7 +37,7 @@ class AppsPage extends React.Component {
         </div>
         <div className="row">
           <div className="col-md-12">
-            <AppListView apps={ this.state.apps }/>
+            <AppListView apps={this.state.apps}/>
           </div>
         </div>
       </Layout>
